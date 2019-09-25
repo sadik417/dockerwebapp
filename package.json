@@ -1,0 +1,27 @@
+{
+  "name": "reportserver",
+  "version": "1.0.0",
+  "description": "",
+  "main": "reportServer.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongod": "^2.0.0",
+    "mongoose": "^5.7.1",
+    "nodemon": "^1.19.2",
+    "pdfkit": "^0.10.0",
+    "request": "^2.88.0",
+    "socket.io": "^2.2.0"
+  },
+  "devDependencies": {
+    "dotenv": "^8.1.0",
+    "jasmine": "^3.4.0"
+  },
+  "scripts": {
+    "local":"nodemon -r dotenv/config reportServer.js",
+    "start": "nodemon reportServer.js",
+    "test": "jasmine"
+  },
+  "author": "",
+  "license": "ISC"
+}

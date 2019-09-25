@@ -1,0 +1,25 @@
+version: '3.1'
+
+services:
+  node:
+    restart: "no"
+    image: node/ninjademo:latest
+    ports:
+      - "9000-9003:9000"
+    env_file:
+      - "dockerVars.env"
+    volumes:
+      - "./node:/user/src/app"
+    depends_on:
+      - mongocon
+    command: node reportServer.js
+    tty: true
+    stdin_open: true
+
+  mongocon:
+    restart: "no"
+    image: mongo
+    volumes:
+      - demodata
+    ports:
+      - "27017:27017"
