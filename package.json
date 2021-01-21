@@ -11,7 +11,7 @@
     "nodemon": "^1.19.2",
     "pdfkit": "^0.10.0",
     "request": "^2.88.0",
-    "socket.io": "^2.2.0"
+    "socket.io": "^2.4.0"
   },
   "devDependencies": {
     "dotenv": "^8.1.0",
